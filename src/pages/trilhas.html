@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilhas de Programação - TDN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../public/styles.css" />
+    
+    <style>
+      
+      body {
+        font-family: 'Poppins', sans-serif; 
+      }
+      /* Adicione quaisquer estilos personalizados aqui se necessário que o Tailwind não cobre */
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-4 bg-gray-950 shadow-md">
+      <div class="text-2xl font-bold text-white">
+        <span class="text-cyan-400">Trilha Dev Norte</span>
+      </div>
+      <div class="flex-1 mx-4">
+        <input
+          type="text"
+          placeholder="O que quer aprender?"
+          class="w-full px-4 py-2 rounded border border-cyan-400 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        />
+      </div>
+      <nav class="space-x-6">
+        <a href="../index.html" class="hover:text-cyan-400 font-semibold">Home</a> <a href="./trilhas.html" class="hover:text-cyan-400 font-semibold">Trilhas</a>
+        <a href="./vagas.html" class="hover:text-cyan-400 font-semibold">Vagas</a>
+        <a href="./certificacoes.html" class="hover:text-cyan-400 font-semibold">Certificações</a>
+        <a href="./login.html" class="hover:text-cyan-400 font-semibold">Entrar</a>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-semibold text-center text-cyan-400 mb-10">Explore Nossas Trilhas de Programação</h1>
+
+        <section class="bg-gray-800 p-6 rounded-lg shadow-md mb-8 flex flex-wrap justify-center gap-4">
+            <button class="filter-button bg-cyan-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-700 transition-colors">Todas as Trilhas</button>
+            <button class="filter-button bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors">Front-end</button>
+            <button class="filter-button bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors">Back-end</button>
+            <button class="filter-button bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors">Mobile</button>
+            <button class="filter-button bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors">Data Science</button>
+            <button class="filter-button bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors">DevOps</button>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+               <img src="../../assets/img/python.jpg" alt="Capa da Trilha de Python" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha Python para Dados</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Domine bibliotecas como Pandas e NumPy para manipulação e análise de grandes volumes de dados.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">Data Science</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/400x200/28a745/ffffff?text=JavaScript" alt="Capa da Trilha de JavaScript" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha JavaScript Essencial</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Aprenda a criar interfaces dinâmicas e interativas para a web com JS puro e frameworks.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">Front-end</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/400x200/ffc107/333333?text=Java" alt="Capa da Trilha de Java" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha Java Backend Profissional</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Desenvolva APIs robustas e escaláveis utilizando a linguagem Java e Spring Boot.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">Back-end</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/400x200/6c757d/ffffff?text=React+Native" alt="Capa da Trilha de React Native" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha Mobile com React Native</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Crie aplicativos nativos para iOS e Android com uma única base de código JavaScript.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">Mobile</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/400x200/17a2b8/ffffff?text=Cloud" alt="Capa da Trilha de Cloud" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha Fundamentos de AWS</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Introdução aos serviços essenciais da Amazon Web Services para deploy e infraestrutura.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">DevOps</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            <div class="course-card bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/400x200/fd7e14/ffffff?text=SQL" alt="Capa da Trilha de SQL" class="w-full h-48 object-cover border-b border-gray-700">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-2">Trilha SQL Essencial</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Aprenda a manipular e consultar dados em bancos de dados relacionais com SQL.</p>
+                    <span class="course-category bg-cyan-900 text-cyan-400 px-3 py-1 rounded-md text-xs font-semibold self-start mb-4">Back-end</span>
+                    <a href="#" class="mt-auto bg-green-500 text-white font-semibold py-3 px-6 rounded-md text-center hover:bg-green-600 transition-colors duration-300">Ver Trilha</a>
+                </div>
+            </div>
+
+            </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const courseCards = document.querySelectorAll('.course-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove classes de ativo de todos os botões e adiciona as classes padrão
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-cyan-600', 'text-white');
+                        btn.classList.add('bg-gray-700', 'text-gray-200');
+                    });
+                    
+                    // Adiciona classes de ativo ao botão clicado
+                    button.classList.remove('bg-gray-700', 'text-gray-200');
+                    button.classList.add('bg-cyan-600', 'text-white');
+
+                    const category = button.textContent.toLowerCase().replace(' ', '-');
+
+                    courseCards.forEach(card => {
+                        const cardCategory = card.querySelector('.course-category').textContent.toLowerCase().replace(' ', '-');
+                        if (category === 'todas-as-trilhas' || cardCategory === category) { // Correção para 'todas-as-trilhas'
+                            card.style.display = 'flex'; // Mostra o card
+                        } else {
+                            card.style.display = 'none'; // Esconde o card
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <footer class="bg-gray-950 p-6 text-center text-gray-500 mt-8">
+        <p>&copy; 2025 Trilha Dev Norte. Todos os direitos reservados.</p>
+    </footer>
+
+  </body>
+</html>
