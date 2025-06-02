@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - TDN</title>
-    <link rel="stylesheet" href="../../public/styles.css" /> 
+    <link rel="stylesheet" href="../../../public/styles.css" /> 
+     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script> 
   </head>
   <body class="bg-gradient-to-br from-sky-900 to-blue-900 flex items-center justify-center min-h-screen text-white">
     <div class="bg-blue-950 p-8 rounded-lg shadow-lg w-full max-w-md border border-blue-400">
@@ -16,10 +19,10 @@
         <input type="email" id="email" class="w-full px-4 py-2 mb-4 bg-blue-900 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" required />
 
         <label for="password" class="block mb-2 text-sm">Senha</label>
-        <input type="password" id="password" class="w-full px-4 py-2 mb-4 bg-blue-900 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" required />
+        <input type="password" id="password" class="w-full px-4 py-2 mb-4 bg-blue-900 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" required minlength="6" />
 
         <label for="confirmPassword" class="block mb-2 text-sm">Confirmar Senha</label>
-        <input type="password" id="confirmPassword" class="w-full px-4 py-2 mb-6 bg-blue-900 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" required />
+        <input type="password" id="confirmPassword" class="w-full px-4 py-2 mb-6 bg-blue-900 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" required minlength="6" />
 
         <button type="submit" class="w-full bg-green-300 text-black font-bold py-2 rounded-lg hover:bg-green-200 transition-colors">CADASTRAR</button>
 
@@ -30,16 +33,13 @@
         </div>
 
         <p class="text-center text-sm text-blue-300 mt-4">
-          <a href="./login.html" class="hover:underline">Já tem uma conta? Faça login</a>
+          <a href="./login.html" class="hover:underline">Já tem uma conta? Faça login</a> 
         </p>
       </form>
     </div>
 
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
+   <link rel="stylesheet" href="../../../public/styles.css" /> 
 
-    <script type="module" src="./src/js/firebase-config.js"></script> 
-    <script type="module" src="./src/js/cadastro.js"></script> 
+<script type="module" src="../js/cadastro.js"></script> 
   </body>
 </html>
