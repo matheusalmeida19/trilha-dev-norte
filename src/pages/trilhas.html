@@ -13,35 +13,29 @@
     <link rel="stylesheet" href="../../public/styles.css" />
     
     <style>
-      
       body {
         font-family: 'Poppins', sans-serif; 
       }
-      /* Adicione esses estilos personalizados aqui para o chatbot */
-      #chatbot-button {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-          cursor: pointer;
-          transition: transform 0.2s; /* Adiciona uma pequena animação ao clicar */
-      }
-      #chatbot-button:active {
-          transform: scale(0.95);
-      }
-
-      #dialogflow-iframe-container {
-          position: fixed;
-          bottom: 90px; /* Ajuste para ficar acima do botão */
-          right: 20px;
-          z-index: 999; /* Fica abaixo do botão, mas acima do conteúdo */
-          display: none; /* Inicia oculto */
-          border-radius: 8px; /* Cantos arredondados */
-          overflow: hidden; /* Garante que o iframe respeite o border-radius */
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-      }
-      #dialogflow-iframe-container iframe {
-          border: none; /* Remove a borda padrão do iframe */
+      /* Estilos para o Dialogflow Messenger (df-messenger) 
+         Você pode personalizar cores e aparência usando variáveis CSS.
+         Aqui estão alguns exemplos, descomente e ajuste conforme necessário.
+      */
+      df-messenger {
+        --df-messenger-button-titlebar-color: #06B6D4; /* Cor do botão e título do chat */
+        --df-messenger-font-color: #E2E8F0; /* Cor do texto no chat */
+        --df-messenger-chat-background-color: #1a202c; /* Cor de fundo do chat */
+        --df-messenger-input-box-color: #2D3748; /* Cor da caixa de entrada de texto */
+        --df-messenger-message-user-background-color: #06B6D4; /* Cor do balão de mensagem do usuário */
+        --df-messenger-message-bot-background-color: #4A5568; /* Cor do balão de mensagem do bot */
+        --df-messenger-border-radius: 8px; /* Cantos arredondados do widget */
+        --df-messenger-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+        /* Para ajustar a posição (opcional, ele já é fixed por padrão) */
+        /*
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        */
       }
     </style>
   </head>
@@ -145,15 +139,12 @@
         <p>&copy; 2025 Trilha Dev Norte. Todos os direitos reservados.</p>
     </footer>
 
-    <div id="chatbot-button" class="bg-cyan-600 text-white p-4 rounded-full shadow-lg hover:bg-cyan-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-        </svg>
-        </div>
-
-    <div id="dialogflow-iframe-container">
-        <iframe height="430" width="350" src="https://bot.dialogflow.com/52ea1daf-93bd-4cc9-83be-1239fcdfe184"></iframe>
-    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      chat-title="Trilha Dev Bot"
+      agent-id="52ea1daf-93bd-4cc9-83be-1239fcdfe184"
+      language-code="pt-br"
+      intent="WELCOME" project-id="chatbot-tdn-r9me" ></df-messenger>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -176,7 +167,7 @@
 
                     courseCards.forEach(card => {
                         const cardCategory = card.querySelector('.course-category').textContent.toLowerCase().replace(' ', '-');
-                        if (category === 'todas-as-trilhas' || cardCategory === category) { // Correção para 'todas-as-trilhas'
+                        if (category === 'todas-as-trilhas' || cardCategory === category) {
                             card.style.display = 'flex'; // Mostra o card
                         } else {
                             card.style.display = 'none'; // Esconde o card
@@ -185,19 +176,6 @@
                 });
             });
 
-            const chatbotButton = document.getElementById('chatbot-button');
-            const dialogflowContainer = document.getElementById('dialogflow-iframe-container');
-            let isChatbotOpen = false; 
-
-            chatbotButton.addEventListener('click', () => {
-                if (isChatbotOpen) {
-                    dialogflowContainer.style.display = 'none'; 
-                    isChatbotOpen = false;
-                } else {
-                    dialogflowContainer.style.display = 'block'; 
-                    isChatbotOpen = true;
-                }
-            });
         });
     </script>
     
