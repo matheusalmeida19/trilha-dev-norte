@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vagas - Trilha Dev Norte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- Estilo Local -->
+    <link rel="stylesheet" href="../../public/styles.css" />
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      df-messenger {
+        --df-messenger-button-titlebar-color: #06B6D4;
+        --df-messenger-font-color: #E2E8F0;
+        --df-messenger-chat-background-color: #1a202c;
+        --df-messenger-input-box-color: #2D3748;
+        --df-messenger-message-user-background-color: #06B6D4;
+        --df-messenger-message-bot-background-color: #4A5568;
+        --df-messenger-border-radius: 8px;
+        --df-messenger-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-900 text-white">
+    <!-- Cabeçalho -->
+    <header class="flex justify-between items-center p-4 bg-gray-950 shadow-md">
+      <div class="text-2xl font-bold text-white">
+        <span class="text-cyan-400">Trilha Dev Norte</span>
+      </div>
+      <div class="flex-1 mx-4">
+        <input
+          type="text"
+          placeholder="O que quer aprender?"
+          class="w-full px-4 py-2 rounded border border-cyan-400 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        />
+      </div>
+      <nav class="space-x-6">
+        <a href="../index.html" class="hover:text-cyan-400 font-semibold">Home</a>
+        <a href="./trilhas.html" class="hover:text-cyan-400 font-semibold">Trilhas</a>
+        <a href="./vagas.html" class="hover:text-cyan-400 font-semibold">Vagas</a>
+        <a href="./certificacoes.html" class="hover:text-cyan-400 font-semibold">Certificações</a>
+        <a href="./login.html" class="hover:text-cyan-400 font-semibold">Entrar</a>
+      </nav>
+    </header>
+
+    <!-- Conteúdo -->
+    <main class="container mx-auto px-6 py-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-center text-cyan-400 mb-10">Vagas de Tecnologia</h1>
+      <p class="text-center text-gray-300 mb-12">
+        Explore as oportunidades abertas em empresas da região Norte.
+      </p>
+
+      <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Vaga 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+          <h2 class="text-xl font-semibold text-cyan-300 mb-2">Desenvolvedor Front-End</h2>
+          <p class="text-gray-400 text-sm mb-2">Empresa: TechManaus</p>
+          <p class="text-sm mb-4">Requisitos: HTML, CSS, JavaScript, React</p>
+          <a href="#" class="text-cyan-400 hover:underline text-sm">Ver mais detalhes</a>
+        </div>
+
+        <!-- Vaga 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+          <h2 class="text-xl font-semibold text-cyan-300 mb-2">Analista de Dados Júnior</h2>
+          <p class="text-gray-400 text-sm mb-2">Empresa: DadosNorte</p>
+          <p class="text-sm mb-4">Requisitos: SQL, Power BI, Python</p>
+          <a href="#" class="text-cyan-400 hover:underline text-sm">Ver mais detalhes</a>
+        </div>
+
+        <!-- Vaga 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+          <h2 class="text-xl font-semibold text-cyan-300 mb-2">Estágio em Cibersegurança</h2>
+          <p class="text-gray-400 text-sm mb-2">Empresa: SafeAmazon</p>
+          <p class="text-sm mb-4">Requisitos: Linux, Segurança Web, Proatividade</p>
+          <a href="#" class="text-cyan-400 hover:underline text-sm">Ver mais detalhes</a>
+        </div>
+
+        <!-- Vaga 4 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+          <h2 class="text-xl font-semibold text-cyan-300 mb-2">Desenvolvedor Full Stack</h2>
+          <p class="text-gray-400 text-sm mb-2">Empresa: NorteTech Solutions</p>
+          <p class="text-sm mb-4">Requisitos: Node.js, React, PostgreSQL</p>
+          <a href="#" class="text-cyan-400 hover:underline text-sm">Ver mais detalhes</a>
+        </div>
+
+        <!-- Vaga 5 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition">
+          <h2 class="text-xl font-semibold text-cyan-300 mb-2">DevOps Engineer</h2>
+          <p class="text-gray-400 text-sm mb-2">Empresa: CloudManaus</p>
+          <p class="text-sm mb-4">Requisitos: AWS, Docker, CI/CD</p>
+          <a href="#" class="text-cyan-400 hover:underline text-sm">Ver mais detalhes</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-950 p-6 text-center text-sm text-gray-400">
+      <p>&copy; 2025 Trilha Dev Norte. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Chatbot Dialogflow -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      chat-title="Trilha Dev Bot"
+      agent-id="52ea1daf-93bd-4cc9-83be-1239fcdfe184"
+      language-code="pt-br"
+      intent="WELCOME"
+      project-id="chatbot-tdn-r9me"
+    ></df-messenger>
+  </body>
+</html>

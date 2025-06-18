@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TDN - Trilha Dev Norte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS local -->
     <link rel="stylesheet" href="../public/styles.css" />
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      df-messenger {
+        --df-messenger-button-titlebar-color: #06B6D4;
+        --df-messenger-font-color: #E2E8F0;
+        --df-messenger-chat-background-color: #1a202c;
+        --df-messenger-input-box-color: #2D3748;
+        --df-messenger-message-user-background-color: #06B6D4;
+        --df-messenger-message-bot-background-color: #4A5568;
+        --df-messenger-border-radius: 8px;
+        --df-messenger-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    </style>
   </head>
+
   <body class="bg-gray-900 text-white">
+    <!-- Cabeçalho -->
     <header class="flex justify-between items-center p-4 bg-gray-950 shadow-md">
       <div class="text-2xl font-bold text-white">
         <span class="text-cyan-400">Trilha Dev Norte</span>
@@ -20,10 +47,82 @@
       </div>
       <nav class="space-x-6">
         <a href="./pages/trilhas.html" class="hover:text-cyan-400 font-semibold">Trilhas</a>
-        <a href=".pages/vagas.html" class="hover:text-cyan-400 font-semibold">Vagas</a>
-        <a href=".pages/certificacoes.html" class="hover:text-cyan-400 font-semibold">Certificações</a>
+        <a href="./pages/vagas.html" class="hover:text-cyan-400 font-semibold">Vagas</a>
+        <a href="./pages/certificacoes.html" class="hover:text-cyan-400 font-semibold">Certificações</a>
         <a href="./pages/login.html" class="hover:text-cyan-400 font-semibold">Entrar</a>
       </nav>
     </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 py-12">
+      <!-- Hero -->
+      <section class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-cyan-400 mb-4">Trilha Dev Norte</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-6">A trilha certa para seu futuro na tecnologia!</p>
+        <a
+          href="./pages/login.html"
+          class="bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-2 px-6 rounded-lg transition"
+        >
+          Comece agora
+        </a>
+      </section>
+
+      <!-- Trilhas -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 text-center text-white">Trilhas disponíveis</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Front-End</h3>
+            <p class="text-gray-300 text-sm">HTML, CSS, JavaScript, React</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Back-End</h3>
+            <p class="text-gray-300 text-sm">Node.js, Express, Banco de Dados</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Cibersegurança</h3>
+            <p class="text-gray-300 text-sm">Linux, Segurança Web, Testes de invasão</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Full Stack</h3>
+            <p class="text-gray-300 text-sm">Front + Back + Deploy</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Análise de Dados</h3>
+            <p class="text-gray-300 text-sm">Python, SQL, Power BI</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition duration-200">
+            <h3 class="text-xl text-cyan-300 font-semibold mb-2">Inteligência Artificial</h3>
+            <p class="text-gray-300 text-sm">Machine Learning, LLMs, Python</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vagas -->
+      <section class="mb-8 text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">Vagas e Oportunidades</h2>
+        <p class="text-gray-400 mb-4">
+          Descubra empresas da região Norte que estão contratando talentos em tecnologia.
+        </p>
+        <a href="./pages/vagas.html" class="text-cyan-400 underline hover:text-cyan-300">
+          Ver oportunidades
+        </a>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-950 p-6 text-center text-sm text-gray-400">
+      <p>&copy; 2025 Trilha Dev Norte. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Chatbot Dialogflow -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      chat-title="Trilha Dev Bot"
+      agent-id="52ea1daf-93bd-4cc9-83be-1239fcdfe184"
+      language-code="pt-br"
+      intent="WELCOME"
+      project-id="chatbot-tdn-r9me"
+    ></df-messenger>
   </body>
 </html>
