@@ -16,28 +16,20 @@
       body {
         font-family: 'Poppins', sans-serif; 
       }
-      /* Estilos para o Dialogflow Messenger (df-messenger) 
-         Você pode personalizar cores e aparência usando variáveis CSS.
-         Aqui estão alguns exemplos, descomente e ajuste conforme necessário.
-      */
+     
       df-messenger {
-        --df-messenger-button-titlebar-color: #06B6D4; /* Cor do botão e título do chat */
-        --df-messenger-font-color: #E2E8F0; /* Cor do texto no chat */
-        --df-messenger-chat-background-color: #1a202c; /* Cor de fundo do chat */
-        --df-messenger-input-box-color: #2D3748; /* Cor da caixa de entrada de texto */
-        --df-messenger-message-user-background-color: #06B6D4; /* Cor do balão de mensagem do usuário */
-        --df-messenger-message-bot-background-color: #4A5568; /* Cor do balão de mensagem do bot */
-        --df-messenger-border-radius: 8px; /* Cantos arredondados do widget */
-        --df-messenger-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
-        /* Para ajustar a posição (opcional, ele já é fixed por padrão) */
-        /*
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        */
+        --df-messenger-button-titlebar-color: #102195; /
+        --df-messenger-font-color: #000000; 
+        --df-messenger-chat-background-color: #39455d; 
+        --df-messenger-input-box-color: #ffffff; 
+        --df-messenger-message-user-background-color: #102195; 
+        --df-messenger-message-bot-background-color: #4A5568; 
+        --df-messenger-border-radius: 8px; 
+        --df-messenger-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  
       }
     </style>
+
   </head>
   <body class="bg-gray-900 text-white">
     <header class="flex justify-between items-center p-4 bg-gray-950 shadow-md">
@@ -139,12 +131,13 @@
         <p>&copy; 2025 Trilha Dev Norte. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
-      chat-title="Trilha Dev Bot"
+      intent="WELCOME"
+      chat-title="chatbot-TDN"
       agent-id="52ea1daf-93bd-4cc9-83be-1239fcdfe184"
-      language-code="pt-br"
-      intent="WELCOME" project-id="chatbot-tdn-r9me" ></df-messenger>
+      language-code="pt-br">
+    </df-messenger>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
